@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Tarantula Studio
+GenericName=GameSir controller configurator
+Comment=Configure GameSir Tarantula Pro / T3 Pro: buttons, sticks, DPI, gyro, lighting
+Exec=tarantula-studio
+Icon=tarantula-studio
+Terminal=false
+Categories=Utility;Settings;HardwareSettings;
+Keywords=GameSir;Tarantula;T3;controller;gamepad;hidraw;DPI;
+StartupNotify=true
+StartupWMClass=tarantula-studio

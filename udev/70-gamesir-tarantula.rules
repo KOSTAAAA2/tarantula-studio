@@ -1,0 +1,14 @@
+# GameSir / Tarantula Studio
+# Grant the logged-in desktop user access to the controller's hidraw
+# configuration node and to its input/event nodes.
+#
+# Install:
+#   sudo install -m 644 udev/70-gamesir-tarantula.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules
+#   sudo udevadm trigger --subsystem-match=hidraw --action=change
+#   sudo udevadm trigger --subsystem-match=input --action=change
+#
+# Then reconnect the controller. Tarantula Studio can also install this rule
+# from the "Диагностика" page using pkexec.
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3537", TAG+="uaccess"
+SUBSYSTEM=="input", ATTRS{idVendor}=="3537", TAG+="uaccess"

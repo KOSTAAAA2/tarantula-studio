@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Launch Tarantula Studio from the source tree.
+set -euo pipefail
+here="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+cd "$here"
+exec python3 -m tarantula_studio "$@"
